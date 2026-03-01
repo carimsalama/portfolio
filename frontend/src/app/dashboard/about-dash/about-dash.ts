@@ -39,8 +39,9 @@ export class AboutDash implements OnInit{
 
     this._aboutService.updateAbout(this.aboutForm.value)
       .subscribe(() => {
-        alert("Updated Successfully ✅");
+        alert("Updated Successfully");
       });
   }
 
 }
+
