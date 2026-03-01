@@ -1,0 +1,29 @@
+:host {
+  --primary: #00e0a4;
+  --text-main: #ffffff;
+  --text-muted: #9aa4bf;
+  --border-soft: rgba(255,255,255,0.06);
+}
+
+.sidebar {
+  background: #080e1c;
+  padding: 30px 25px;
+  border-right: 1px solid var(--border-soft);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar h2 { margin-bottom: 40px; color: var(--text-main); }
+.sidebar h2 span { color: var(--primary); }
+
+.sidebar nav a {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar nav a.active, .sidebar nav a:hover { color: var(--primary); }

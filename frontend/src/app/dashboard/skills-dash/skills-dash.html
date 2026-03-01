@@ -1,0 +1,51 @@
+<section class="panel" >
+  <form action="#" method="post" (ngSubmit)="submit()" [formGroup]= "skillsForm">
+
+  <h3>Skills Management</h3>
+
+  <div class="form-group">
+    <label>Category Name</label>
+    <input type="text" formControlName="category" placeholder="e.g. Frontend, Backend, Tools">
+  </div>
+
+  <div class="form-group" formArrayName="skillsList">
+    <label>Skills List</label>
+
+    <div class="d-flex-container" *ngFor="let skill of skillsList.controls; let i = index">
+    <input type="text" [formControlName]="i" placeholder="Flutter, Dart, React">
+      <!-- <button class="btn removed" type="button" (click)="removeSkill(i)">×</button> -->
+      </div>
+  </div>
+
+  <div class="actions">
+    <button type = "button" class="btn ghost" (click)="addSkill()">+ Add Skill Category</button>
+    <button class="btn primary">
+  {{ selectedSkillId ? 'Update Skill' : 'Add Skill' }}
+</button>
+  </div>
+</form>
+
+
+
+
+<div class="skills-container">
+  <div class="skill-card" *ngFor="let skill of allSkills">
+
+    <div class="card-header">
+      <h4>{{ skill.category }}</h4>
+
+      <div class="card-actions">
+        <button class="btn-edit" (click)="editSkill(skill)">Edit</button>
+        <button class="btn-delete" (click)="deleteSkill(skill._id!)">Delete</button>
+      </div>
+    </div>
+
+    <div class="skill-tags">
+      <span class="tag" *ngFor="let item of skill.items">
+        {{ item }}
+      </span>
+    </div>
+
+  </div>
+</div>
+</section>

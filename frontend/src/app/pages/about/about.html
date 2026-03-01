@@ -1,0 +1,45 @@
+  <div class="about-section" *ngIf="aboutData">
+      <div class="container">
+    <div class="about-header">
+      <h2>About <span>Me</span></h2>
+      
+    </div>
+
+    <div class="about-grid">
+      <!-- Text -->
+      <div class="about-text">
+              <h3>{{ aboutData.title }}   </h3>
+              <!-- <span>Passion & Precision</span> -->
+
+        <p>
+          {{ aboutData.description }}
+        </p>
+      </div>
+
+     <!-- Stats -->
+      <div class="about-stats">
+
+        <div class="stat-card">
+          <h4>{{ aboutData.experience }}+</h4>
+          <span>Years Experience</span>
+        </div>
+
+        <div class="stat-card">
+          <h4>{{ aboutData.projects }}+</h4>
+          <span>Projects Built</span>
+        </div>
+
+        <div class="stat-card">
+          <h4>{{ aboutData.problem }}%</h4>
+          <span>Problem Solving</span>
+        </div>
+
+        <div class="stat-card">
+          <h4>{{ aboutData.technologies }}+</h4>
+          <span>Technologies</span>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </div>

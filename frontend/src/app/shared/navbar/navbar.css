@@ -1,0 +1,29 @@
+.navbar {
+  background: rgba(10,15,30,.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo span { color: var(--primary); }
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav a.active {
+  color: var(--primary);
+}
+

@@ -1,0 +1,23 @@
+<!-- ABOUT -->
+    <section class="panel" [formGroup]="aboutForm">
+      <form action="#" method="post" (ngSubmit)="onUpdate()" [formGroup]= "aboutForm">
+
+      <h3>About Section</h3>
+<div class="form-group">
+        <label>About Title</label>
+        <input type="text" formControlName="title" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label>About Description</label>
+        <textarea rows="4" formControlName="description"></textarea>
+      </div>
+
+      <div class="stats-grid">
+        <input type="text" formControlName="experience"  placeholder="Years Experience NO.">
+        <input type="text" formControlName="projects" placeholder="Projects NO.">
+        <input type="text" formControlName="problem" placeholder="Problem Solving NO.">
+        <input type="text" formControlName="technologies" placeholder="Technologies NO.">
+      </div>
+       <button class="btn primary">Update</button>
+       </form>
+    </section>

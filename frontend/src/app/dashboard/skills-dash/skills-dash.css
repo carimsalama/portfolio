@@ -1,0 +1,188 @@
+/* العزل التام للمكون باستخدام :host */
+:host {
+  --primary: #00e0a4;
+  --bg-card: #121a2f;
+  --text-main: #ffffff;
+  --text-muted: #9aa4bf;
+  --border-soft: rgba(255,255,255,0.06);
+  --removed:rgb(216, 216, 216);
+}
+
+.panel {
+  background: var(--bg-card);
+  border-radius: 22px;
+  padding: 30px;
+  border: 1px solid var(--border-soft);
+}
+
+h3 {
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(0, 224, 164, 0.02); /* لمسة خفيفة عند التركيز */
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #000;
+}
+
+.btn.primary:hover {
+  box-shadow: 0 4px 15px rgba(0, 224, 164, 0.3);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn.ghost:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+.btn.removed {
+  background: var(--removed);
+  color: #680303;
+  font-size: large;
+}
+.btn.removed:hover {
+  box-shadow: 0 4px 15px rgba(224, 45, 0, 0.3);
+}
+
+.d-flex-container {
+    display: flex;       /* بيخلي العناصر جنب بعض */
+    align-items: center; /* بيخلي العناصر في نص السطر بالظبط عمودياً */
+    gap: 10px;           /* بيسيب مسافة بسيطة بين الإنفوت والزرار */
+    margin-bottom: 10px; /* عشان يسيب مسافة بين كل سطر والتاني */
+}
+
+/* اختياري: لو عايز الإنفوت ياخد المساحة كلها ويزق الزرار للآخر */
+.d-flex-container input {
+    flex-grow: 1;
+}
+
+.divider {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Container */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 18px;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header h4 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 18px;
+}
+
+/* Buttons */
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-edit {
+  background: rgba(0,224,164,0.1);
+  color: var(--primary);
+}
+
+.btn-delete {
+  background: rgba(255,0,0,0.1);
+  color: #ff4d4f;
+}
+
+/* Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(0,224,164,0.1);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}

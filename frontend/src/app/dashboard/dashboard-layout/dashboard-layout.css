@@ -1,0 +1,22 @@
+:host {
+  --bg-main: #070b17;
+  --text-main: #ffffff;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: var(--bg-main);
+}
+
+.content {
+  padding: 40px;
+  color: var(--text-main);
+}
+
+.content h1 { margin-bottom: 30px; }
+
+@media (max-width: 900px) {
+  .dashboard { grid-template-columns: 1fr; }
+}

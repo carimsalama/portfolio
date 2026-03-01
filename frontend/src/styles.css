@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-main: #0b1220;
+  --bg-card: #121a2f;
+  --primary: #00e0a4;
+  --text-main: #ffffff;
+  --text-muted: #9aa4bf;
+  --border-soft: rgba(255,255,255,0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f1c3f, #070b17);
+  color: var(--text-main);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}

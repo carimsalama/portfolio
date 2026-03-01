@@ -1,0 +1,55 @@
+   <div class="contact-section " *ngIf="contactData">
+    <div class="container">
+  <div class="contact-header">
+    <h2>Get In <span>Touch</span></h2>
+    <p>Have a project in mind or just want to say hello? Let's talk.</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Info -->
+    <div class="contact-info">
+      <h3>Let's build something great</h3>
+      <p>
+        I'm always open to discussing new projects, creative ideas,
+        or opportunities to be part of your vision.
+      </p>
+
+      <div class="info-item">
+        <span>Email</span>
+        <p>{{contactData.email}}</p>
+      </div>
+
+      <div class="info-item">
+        <span>Location</span>
+        <p>{{contactData.location}}</p>
+      </div>
+
+      <div class="socials">
+        <a [href]="contactData.linkedin" target="_blank">LinkedIn</a>
+        <a [href]="contactData.github" target="_blank">GitHub</a>
+        <a [href]="contactData.whatsapp" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form class="contact-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="John Doe">
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Write your message..."></textarea>
+      </div>
+
+      <button class="btn primary">Send Message</button>
+    </form>
+  </div>
+</div>
+</div>

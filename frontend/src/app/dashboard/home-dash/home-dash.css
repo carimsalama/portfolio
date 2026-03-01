@@ -1,0 +1,51 @@
+:host {
+  --bg-card: #121a2f;
+  --primary: #00e0a4;
+  --text-main: #ffffff;
+  --border-soft: rgba(255,255,255,0.06);
+}
+
+.panel {
+  background: var(--bg-card);
+  border-radius: 22px;
+  padding: 30px;
+  border: 1px solid var(--border-soft);
+}
+
+h3 { color: var(--primary); margin-bottom: 20px; }
+
+.form-group { margin-bottom: 18px; }
+label { display: block; font-size: 14px; margin-bottom: 6px; color: var(--text-main); }
+
+input, textarea {
+  width: 100%; padding: 12px; border-radius: 12px; background: transparent;
+  border: 1px solid var(--border-soft); color: var(--text-main); outline: none;
+}
+
+input:focus { border-color: var(--primary); }
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+.btn-primary {
+  background: var(--primary); color: #000; border: none;
+  padding: 12px 25px; border-radius: 25px; cursor: pointer;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn.ghost:hover {
+  background: var(--primary);
+  color: #000;
+}

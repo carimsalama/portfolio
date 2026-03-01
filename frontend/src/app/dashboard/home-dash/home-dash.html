@@ -1,0 +1,49 @@
+<section class="panel" [formGroup]="homeForm">
+    <form action="#" method="post" (ngSubmit)="onUpdate()" [formGroup]= "homeForm">
+
+  <h3>Home Section</h3>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" formControlName="name" placeholder="Karim Salama">
+  </div>
+  <div class="form-group">
+    <label>Image</label>
+    <input type="file" (change)="onFileSelect($event)">
+  </div>
+
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" formControlName="title"  placeholder="Available for Freelance Work">
+  </div>
+
+  <div class="form-group">
+    <label>Description</label>
+    <textarea rows="3" formControlName="description"></textarea>
+  </div>
+
+<div class="form-group">
+    <label>LinkedIn URL</label>
+    <input type="text" formControlName="linkedInUrl" placeholder="LinkedIn URL">
+  </div>
+  <div class="form-group">
+    <label>CV URL</label>
+    <input type="text" formControlName="cvUrl" placeholder="CV">
+  </div>
+  <div class="form-group">
+    <label>GitHub URL</label>
+    <input type="text" formControlName="githubUrl" placeholder="GitHub URL">
+  </div>
+  <div class="form-group" formArrayName="workingWith">
+        <label>Working With</label>
+
+        <div *ngFor="let control of workingWithControls; let i = index" style="margin-bottom: 8px;">
+        <input type="text" [formControlName]="i"  placeholder="Flutter, Dart, Firebase">
+        </div>
+        
+      </div>
+      <button type = "button" class="btn ghost" (click)="addWorkingWith()">+ Add Working with</button>
+      
+  <button class="btn-primary">Update Home</button>
+    </form>
+</section>

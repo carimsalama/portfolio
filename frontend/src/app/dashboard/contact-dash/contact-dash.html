@@ -1,0 +1,24 @@
+ <!-- CONTACT -->
+    <section id="contact" class="panel">
+    <form action="#" method="post" (ngSubmit)="submit()" [formGroup]= "contactForm">
+      <h3>Contact Info</h3>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" placeholder="email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" formControlName="location" placeholder="Egypt">
+      </div>
+
+      <div class="form-group">
+        <label>Social Links</label>
+        <input type="text"  formControlName="linkedin" placeholder="LinkedIn URL">
+        <input type="text" formControlName="github" placeholder="GitHub URL">
+        <input type="text" formControlName="whatsapp" placeholder="WhatsApp URL">
+    </div>
+    <button class="btn primary">Update</button>
+    </form>
+    </section>
