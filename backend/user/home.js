@@ -54,7 +54,6 @@ router.put('/', upload.single("img"), async (req, res) => {
       github
     };
 
-    // لو فيه صورة جديدة ارفعها
     if (req.file) {
       updateData.image = req.file.path;
     }
@@ -62,7 +61,7 @@ router.put('/', upload.single("img"), async (req, res) => {
     const home = await Home.findOneAndUpdate(
       {},                 //first one
       updateData,
-      { returnDocument: 'after', upsert: true }
+      { returnDocument: 'after', upsert: true } // upsert for if no homedatato update, insert the data 
     );
 
     res.json(home);
@@ -71,6 +70,7 @@ router.put('/', upload.single("img"), async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
+
 
 
 module.exports = router ;
