@@ -20,7 +20,6 @@ export class Projects implements OnInit {
   ngOnInit(): void {
     this._portfolioService.getProjects().subscribe({
       next: (res: IProject[]) => {
-        // تعديل مسار الصور عشان يظهر صح
         this.projects = res.map(project => ({
           ...project,
           image: 'http://localhost:4000/' + project.image.replace(/\\/g, '/')
@@ -31,5 +30,6 @@ export class Projects implements OnInit {
     
     });
   }
+
 
 }
