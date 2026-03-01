@@ -41,9 +41,10 @@ export class ContactDash implements OnInit{
       return;
     }
     this._contactService.updateContact(this.contactForm.value).subscribe(()=>{
-        alert("Updated Successfully ✅");
+        alert("Updated Successfully");
     })
   }
 
   
+
 }
